@@ -1,0 +1,11 @@
+mutation updateContacts ($_id:ObjectId!, $contacts:[Contact_collContactUpdateInput]) {
+    updateOneContact_coll(set: {
+        _id: $_id
+        contacts: $contacts
+    }) {
+        _id,
+        contacts{
+            cid
+        }
+    }
+}

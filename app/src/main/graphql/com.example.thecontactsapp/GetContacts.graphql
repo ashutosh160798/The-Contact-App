@@ -1,0 +1,13 @@
+query getContacts ($_id : ObjectId!){
+    contact_coll(query: {_id:$_id}){
+        contacts{
+            cid
+            name
+            email
+            phone
+            category
+            address
+            img_uri
+        }
+    }
+}

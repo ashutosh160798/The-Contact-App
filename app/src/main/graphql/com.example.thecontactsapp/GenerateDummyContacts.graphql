@@ -1,0 +1,49 @@
+mutation createDummyContact  {
+    insertOneContact_coll(data: {
+        contacts: [
+            {
+                name: "Dummy Contact"
+                phone: ["9876543214","12312461"]
+                email: ["dummy@contact.com","dummy@con.com"]
+                address: "New Delhi"
+                category: "Home"
+                cid: 1
+            },
+            {
+                name: "Sample Contact"
+                phone: ["98765214","123132461"]
+                email: ["sample@contact.com","sample@con.com"]
+                address: "Delhi"
+                category: "Office"
+                cid: 2
+            },
+            {
+                name: "User"
+                phone: ["9822543214","124452461"]
+                address: "New Delhi"
+                category: "Home"
+                cid: 3
+            },
+            {
+                name: "Email Contact"
+                email: ["email@contact.com","email@con.com"]
+                cid: 4
+            },
+            {
+                name: "Address Contact"
+                address: "Rohini, Delhi"
+                category: "Home"
+                cid: 5
+            },
+            {
+                name: "Empty Contact"
+                cid: 6
+            }
+        ]
+    }) {
+        _id,
+        contacts{
+            cid
+        }
+    }
+}
